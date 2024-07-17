@@ -30,7 +30,7 @@ import java.util.stream.Stream;
  * Settings of Kuromoji tokenizer.
  *
  * @see com.atilika.kuromoji.TokenizerBase
- * @see com.atilika.kuromoji.ipadic.Tokenizer
+ * @see com.atilika.kuromoji.unidic.Tokenizer
  */
 public class KuromojiContext {
 
@@ -137,10 +137,10 @@ public class KuromojiContext {
    * @return new Kuromoji tokenizer
    * @throws IOException failed to load user dictionary
    */
-  public com.atilika.kuromoji.ipadic.Tokenizer createTokenizer() throws IOException {
+  public com.atilika.kuromoji.unidic.Tokenizer createTokenizer() throws IOException {
     try (InputStream userDictStream = new ByteArrayInputStream(userDictContent.getBytes(StandardCharsets.UTF_8))) {
       // @formatter:off
-      return new com.atilika.kuromoji.ipadic.Tokenizer.Builder()
+      return new com.atilika.kuromoji.unidic.Tokenizer.Builder()
                     .mode(mode)
                     .kanjiPenalty(kanjiLengthThreshold, kanjiPenalty)
                     .otherPenalty(otherLengthThreshold, otherPenalry)
