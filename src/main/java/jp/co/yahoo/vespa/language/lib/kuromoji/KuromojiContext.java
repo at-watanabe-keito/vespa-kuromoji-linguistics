@@ -141,10 +141,6 @@ public class KuromojiContext {
     try (InputStream userDictStream = new ByteArrayInputStream(userDictContent.getBytes(StandardCharsets.UTF_8))) {
       // @formatter:off
       return new com.atilika.kuromoji.unidic.Tokenizer.Builder()
-                    .mode(mode)
-                    .kanjiPenalty(kanjiLengthThreshold, kanjiPenalty)
-                    .otherPenalty(otherLengthThreshold, otherPenalry)
-                    .isSplitOnNakaguro(nakaguroSplit)
                     .userDictionary(userDictStream)
                     .build();
       // @formatter:on
