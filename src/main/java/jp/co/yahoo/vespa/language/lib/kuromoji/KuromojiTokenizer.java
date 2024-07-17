@@ -32,7 +32,7 @@ public class KuromojiTokenizer implements Tokenizer {
   private Transformer transformer;
 
   private Tokenizer fallback;
-  private com.atilika.kuromoji.ipadic.Tokenizer tokenizer;
+  private com.atilika.kuromoji.unidic.Tokenizer tokenizer;
 
   /**
    * Create KuromojiTokenizer.
@@ -72,7 +72,7 @@ public class KuromojiTokenizer implements Tokenizer {
 
     List<Token> tokens = new ArrayList<>();
     int normOffset = 0;
-    for (com.atilika.kuromoji.ipadic.Token t : tokenizer.tokenize(result.norm)) {
+    for (com.atilika.kuromoji.unidic.Token t : tokenizer.tokenize(result.norm)) {
       if (t.getSurface().isEmpty()) {
         continue;
       }
@@ -99,7 +99,7 @@ public class KuromojiTokenizer implements Tokenizer {
     return tokens;
   }
 
-  private String getOrig(com.atilika.kuromoji.ipadic.Token t, String input, int normOffset,
+  private String getOrig(com.atilika.kuromoji.unidic.Token t, String input, int normOffset,
                          JapaneseNormalizer.Result result) {
     int endNormOffset = normOffset + t.getSurface().length();
     while (result.origIndexes[normOffset] == result.origIndexes[endNormOffset]) {
@@ -110,7 +110,7 @@ public class KuromojiTokenizer implements Tokenizer {
     return input.substring(result.origIndexes[normOffset], result.origIndexes[endNormOffset]);
   }
 
-  private String processToken(com.atilika.kuromoji.ipadic.Token t, Language language, StemMode stemMode,
+  private String processToken(com.atilika.kuromoji.unidic.Token t, Language language, StemMode stemMode,
                               boolean removeAccents) {
     String input = t.getBaseForm();
     if (stemMode == StemMode.NONE || "*".equals(input)) {
