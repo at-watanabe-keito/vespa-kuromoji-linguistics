@@ -112,7 +112,7 @@ public class KuromojiTokenizer implements Tokenizer {
 
   private String processToken(com.atilika.kuromoji.unidic.Token t, Language language, StemMode stemMode,
                               boolean removeAccents) {
-    String input = t.getBaseForm();
+    String input = t.getWrittenBaseForm();
     if (stemMode == StemMode.NONE || "*".equals(input)) {
       // XXX: sometime, base form will be "*" (maybe UNKNOWN)
       input = t.getSurface();
