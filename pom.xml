@@ -14,7 +14,7 @@
   <packaging>container-plugin</packaging>
 
   <name>kuromoji-linguistics</name>
-  <url>https://github.com/yahoojapan/vespa-kuromoji-linguistics</url>
+  <url>https://github.com/at-watanabe-keito/vespa-kuromoji-linguistics</url>
 
   <licenses>
     <license>
