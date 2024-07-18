@@ -33,13 +33,13 @@
     <vespa.version>7.594.36</vespa.version>
     <guice.version>3.0</guice.version>
     
-    <kuromoji-unidic.version>0.9.0</kuromoji-unidic.version>
+    <kuromoji-unidic.version>1.0-SNAPSHOT</kuromoji-unidic.version>
   </properties>
   
   <repositories>
     <repository>
-      <id>Atilika Open Source repository</id>
-      <url>http://www.atilika.org/nexus/content/repositories/atilika</url>
+      <id>Original Kuromoji-unidic Repository</id>
+      <url>https://sp-repo.k-plat.com</url>
     </repository>
   </repositories>
 
@@ -76,7 +76,7 @@
     </dependency>
 
     <dependency>
-  	  <groupId>com.atilika.kuromoji</groupId>
+      <groupId>vespa.test</groupId>
       <artifactId>kuromoji-unidic</artifactId>
       <version>${kuromoji-unidic.version}</version>
     </dependency>
