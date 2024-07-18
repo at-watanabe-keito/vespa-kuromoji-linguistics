@@ -81,6 +81,11 @@
 
     <dependency>
       <groupId>vespa.test</groupId>
+      <artifactId>kuromoji-core</artifactId>
+      <version>${kuromoji-unidic.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>vespa.test</groupId>
       <artifactId>kuromoji-unidic</artifactId>
       <version>${kuromoji-unidic.version}</version>
     </dependency>
