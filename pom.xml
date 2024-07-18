@@ -38,6 +38,10 @@
   
   <repositories>
     <repository>
+      <id>Atilika Open Source repository</id>
+      <url>http://www.atilika.org/nexus/content/repositories/atilika</url>
+    </repository>
+    <repository>
       <id>Original Kuromoji-unidic Repository</id>
       <url>https://sp-repo.k-plat.com</url>
     </repository>
